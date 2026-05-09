@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIBLIA 1960</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #222;
+    }
+
+    header {
+      background: #1e3a5f;
+      color: white;
+      padding: 25px;
+      text-align: center;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .versiculo {
+      margin-top: 30px;
+      padding: 20px;
+      background: #eef4ff;
+      border-left: 5px solid #1e3a5f;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #666;
+      margin-top: 40px;
+    }
+
+    button {
+      background: #1e3a5f;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+      background: #284d7a;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BIBLIA REINA VALERA 1960</h1>
+    <p>Proyecto publicado con GitHub Pages</p>
+  </header>
+
+  <main>
+
+    <h2>Versículo del Día</h2>
+
+    <div class="versiculo" id="versiculo">
+      "Porque de tal manera amó Dios al mundo, que ha dado a su Hijo unigénito..."
+      <br><br>
+      <strong>Juan 3:16</strong>
+    </div>
+
+    <button onclick="cambiarVersiculo()">
+      Mostrar otro versículo
+    </button>
+
+  </main>
+
+  <footer>
+    © 2026 BIBLIA-1960
+  </footer>
+
+  <script>
+    const versiculos = [
+      {
+        texto: "Todo lo puedo en Cristo que me fortalece.",
+        cita: "Filipenses 4:13"
+      },
+      {
+        texto: "Jehová es mi pastor; nada me faltará.",
+        cita: "Salmos 23:1"
+      },
+      {
+        texto: "Clama a mí, y yo te responderé.",
+        cita: "Jeremías 33:3"
+      },
+      {
+        texto: "El Señor es mi luz y mi salvación.",
+        cita: "Salmos 27:1"
+      }
+    ];
+
+    function cambiarVersiculo() {
+      const random = Math.floor(Math.random() * versiculos.length);
+
+      document.getElementById("versiculo").innerHTML = `
+        "${versiculos[random].texto}"
+        <br><br>
+        <strong>${versiculos[random].cita}</strong>
+      `;
+    }
+  </script>
+
+</body>
+</html>
